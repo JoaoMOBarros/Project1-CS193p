@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		5F178ED42A03069800CBBA95 /* SetGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F178ED32A03069800CBBA95 /* SetGameApp.swift */; };
-		5F178ED62A03069800CBBA95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F178ED52A03069800CBBA95 /* ContentView.swift */; };
+		5F178ED62A03069800CBBA95 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F178ED52A03069800CBBA95 /* GameView.swift */; };
 		5F178ED82A03069900CBBA95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F178ED72A03069900CBBA95 /* Assets.xcassets */; };
 		5F178EDB2A03069900CBBA95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F178EDA2A03069900CBBA95 /* Preview Assets.xcassets */; };
+		5F178EE22A05938100CBBA95 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F178EE12A05938100CBBA95 /* Controller.swift */; };
+		5F178EE42A05938800CBBA95 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F178EE32A05938800CBBA95 /* Model.swift */; };
+		5F178EE62A059CC200CBBA95 /* CardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F178EE52A059CC200CBBA95 /* CardDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5F178ED02A03069800CBBA95 /* SetGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SetGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F178ED32A03069800CBBA95 /* SetGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameApp.swift; sourceTree = "<group>"; };
-		5F178ED52A03069800CBBA95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5F178ED52A03069800CBBA95 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		5F178ED72A03069900CBBA95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F178EDA2A03069900CBBA95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5F178EE12A05938100CBBA95 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		5F178EE32A05938800CBBA95 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		5F178EE52A059CC200CBBA95 /* CardDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				5F178ED32A03069800CBBA95 /* SetGameApp.swift */,
-				5F178ED52A03069800CBBA95 /* ContentView.swift */,
+				5F178ED52A03069800CBBA95 /* GameView.swift */,
+				5F178EE12A05938100CBBA95 /* Controller.swift */,
+				5F178EE52A059CC200CBBA95 /* CardDetails.swift */,
+				5F178EE32A05938800CBBA95 /* Model.swift */,
 				5F178ED72A03069900CBBA95 /* Assets.xcassets */,
 				5F178ED92A03069900CBBA95 /* Preview Content */,
 			);
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F178ED62A03069800CBBA95 /* ContentView.swift in Sources */,
+				5F178EE22A05938100CBBA95 /* Controller.swift in Sources */,
+				5F178ED62A03069800CBBA95 /* GameView.swift in Sources */,
+				5F178EE62A059CC200CBBA95 /* CardDetails.swift in Sources */,
 				5F178ED42A03069800CBBA95 /* SetGameApp.swift in Sources */,
+				5F178EE42A05938800CBBA95 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
