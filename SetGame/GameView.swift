@@ -7,32 +7,77 @@
 
 import SwiftUI
 
+extension Color{
+    static let offWhite = Color(red: 225/255, green: 225/255, blue: 235/255)
+}
+
 struct GameView: View {
     
     @ObservedObject var controller: Controller
     
+    let cards = [1,2,3,4,5]
+    
     var body: some View {
-        VStack {
-            HStack{
-                Text("Set Game")
-                    .font(.title)
+        ZStack{
+            Color.offWhite
+            VStack {
                 Spacer()
-                Button(action: controller.startNewGame){
-                    Image(systemName: "plus")
-                    Text("New Game")
+                HStack{
+                    Text("Set Game")
+                        .font(.title)
+                    Spacer()
+                    Button(action: controller.startNewGame){
+                        Image(systemName: "square.stack.3d.up")
+                        Text("New Game")
+                    }
                 }
-            }
-            VStack{}
-            HStack{
-                Button(action: controller.drawCards){
-                    Image(systemName: "plus")
-                    Text("New Game")
+                Spacer()
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 75))]){
+                    ForEach((1...10), id: \.self){ card in
+                        CardView().aspectRatio(2/3,contentMode: .fit).onTapGesture {
+                            controller.selectCard()
+                        }
+                    }
                 }
-            }
-        }
-        .padding()
+                Spacer()
+                HStack{
+                    Button(action: controller.drawCards){
+                        Image(systemName: "plus")
+                        Text("Draw Cards")
+                    }
+                    .buttonStyle(.borderedProminent)
+                }
+                Spacer()
+            }.padding()
+        }.edgesIgnoringSafeArea(.all)
     }
 }
+
+struct CardView: View{
+    var body: some View{
+        ZStack{
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color.offWhite)
+                .shadow(color: .black.opacity(0.2), radius: 10, x:10, y:10)
+                .shadow(color: .white.opacity(0.7), radius: 10, x:-5, y:-5).padding(3)
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

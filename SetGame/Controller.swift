@@ -16,4 +16,8 @@ class Controller: ObservableObject{
     func drawCards(){
         print("New Cards")
     }
+    
+    func selectCard(){
+        print("Card selected")
+    }
 }
