@@ -32,10 +32,12 @@ struct GameView: View {
                     }
                 }
                 Spacer()
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 75))]){
-                    ForEach((1...10), id: \.self){ card in
-                        CardView().aspectRatio(2/3,contentMode: .fit).onTapGesture {
-                            controller.selectCard()
+                ScrollView{
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 75))]){
+                        ForEach(controller.cards){ card in
+                            CardView(cardInfo: card).aspectRatio(2/3,contentMode: .fit).onTapGesture {
+                                controller.selectCard()
+                            }
                         }
                     }
                 }
@@ -54,6 +56,9 @@ struct GameView: View {
 }
 
 struct CardView: View{
+    
+    let cardInfo: Model<String>.Card
+    
     var body: some View{
         ZStack{
             RoundedRectangle(cornerRadius: 10)

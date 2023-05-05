@@ -7,14 +7,25 @@
 
 import Foundation
 
-struct MemoryModel<CardContent>{
+struct Model<CardContent>{
     private(set) var cards: Array<Card>
-    private(set) var onScreen: Array<Card>
+    
+    init(arrayOfContent: Array<CardInfo>){
+        cards = Array<Card>()
+        for index in 0..<arrayOfContent.count{
+            cards.append(Card(id: index, content: arrayOfContent[index]))
+        }
+        cards.shuffle()
+    }
     
     struct Card: Identifiable{
         var id: Int
         var isSelected: Bool = false
         var isMatched: Bool = false
+        var content: CardInfo
+    }
+    
+    struct CardInfo{
         let color: CardDetails.Color
         let shape: CardDetails.Shape
         let number: CardDetails.Number
