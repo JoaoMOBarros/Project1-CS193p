@@ -17,14 +17,12 @@ struct DiamondShape: View{
             DiamondTrace()
             .stroke(controller.getColor(color: details.color), lineWidth: 2)
             .frame(width: 50, height: 25)
-            .padding(_: -10)
         }
         else{
             DiamondTrace()
             .foregroundColor(controller.getColor(color: details.color))
             .opacity(controller.getShade(shade: details.shade))
             .frame(width: 50, height: 25)
-            .padding(_: -10)
         }
     }
 }
@@ -39,14 +37,12 @@ struct OvalShape: View{
             Ellipse()
             .stroke(controller.getColor(color: details.color), lineWidth: 2)
             .frame(width: 50, height: 25)
-            .padding(_: -10)
         }
         else{
             Ellipse()
             .foregroundColor(controller.getColor(color: details.color))
             .opacity(controller.getShade(shade: details.shade))
             .frame(width: 50, height: 25)
-            .padding(_: -10)
         }
     }
 }
@@ -61,14 +57,12 @@ struct RectangleShape: View{
             Rectangle()
             .stroke(controller.getColor(color: details.color), lineWidth: 2)
             .frame(width: 50, height: 25)
-            .padding(_: -10)
         }
         else{
             Rectangle()
             .foregroundColor(controller.getColor(color: details.color))
             .opacity(controller.getShade(shade: details.shade))
             .frame(width: 50, height: 25)
-            .padding(_: -10)
         }
     }
 }

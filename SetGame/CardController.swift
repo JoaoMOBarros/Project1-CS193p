@@ -42,4 +42,15 @@ class CardController{
                 return 0.5
         }
     }
+    
+    func getNumber(number: CardDetails.Number) -> Int{
+        switch number{
+            case .one:
+                return 1
+            case .two:
+                return 2
+            case .three:
+                return 3
+        }
+    }
 }
