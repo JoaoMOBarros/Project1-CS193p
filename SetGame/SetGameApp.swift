@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct SetGameApp: App {
-    let game = Controller()
+    let game = GameController()
     var body: some Scene {
         WindowGroup {
             GameView(controller: game)

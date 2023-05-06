@@ -15,7 +15,7 @@ struct CardDetails{
     }
 
     enum Color: CaseIterable{
-        case req
+        case red
         case blue
         case green
     }

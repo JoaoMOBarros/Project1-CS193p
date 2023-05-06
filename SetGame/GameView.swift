@@ -13,7 +13,7 @@ extension Color{
 
 struct GameView: View {
     
-    @ObservedObject var controller: Controller
+    @ObservedObject var controller: GameController
     
     let cards = [1,2,3,4,5]
     
@@ -57,7 +57,8 @@ struct GameView: View {
 
 struct CardView: View{
     
-    let cardInfo: Model<String>.Card
+    let cardInfo: GameModel<String>.Card
+    var controller = CardController()
     
     var body: some View{
         ZStack{
@@ -66,7 +67,7 @@ struct CardView: View{
                 .shadow(color: .black.opacity(0.2), radius: 10, x:10, y:10)
                 .shadow(color: .white.opacity(0.7), radius: 10, x:-5, y:-5).padding(3)
             VStack{
-                RectangleShape()
+                controller.getShape(details: cardInfo.content)
             }
             
         }
@@ -85,12 +86,9 @@ struct CardView: View{
 
 
 
-
-
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let game = Controller()
+        let game = GameController()
         GameView(controller: game)
     }
 }

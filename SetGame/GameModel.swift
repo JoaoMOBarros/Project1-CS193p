@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Model<CardContent>{
+struct GameModel<CardContent>{
     private(set) var cards: Array<Card>
     
     init(arrayOfContent: Array<CardInfo>){

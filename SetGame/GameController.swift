@@ -8,17 +8,17 @@
 import Foundation
 
 
-class Controller: ObservableObject{
+class GameController: ObservableObject{
     
-    static func generateCards() -> Array<Model<String>.CardInfo>{
+    static func generateCards() -> Array<GameModel<String>.CardInfo>{
         
-        var cardsInfo: Array<Model<String>.CardInfo> = []
+        var cardsInfo: Array<GameModel<String>.CardInfo> = []
         
         for shape in CardDetails.Shape.allCases {
             for color in CardDetails.Color.allCases{
                 for number in CardDetails.Number.allCases{
                     for shade in CardDetails.Shade.allCases{
-                        cardsInfo.append(Model<String>.CardInfo(
+                        cardsInfo.append(GameModel<String>.CardInfo(
                             color: color,
                             shape: shape,
                             number: number,
@@ -31,13 +31,13 @@ class Controller: ObservableObject{
         return cardsInfo
     }
     
-    static func createSetGame() -> Model<String> {
-        Model<String>(arrayOfContent: generateCards())
+    static func createSetGame() -> GameModel<String> {
+        GameModel<String>(arrayOfContent: generateCards())
     }
     
-    @Published private var model: Model<String> = createSetGame()
+    @Published private var model: GameModel<String> = createSetGame()
     
-    var cards: Array<Model<String>.Card>{
+    var cards: Array<GameModel<String>.Card>{
         return model.cards
     }
     
