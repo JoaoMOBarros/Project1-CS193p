@@ -14,6 +14,7 @@
 		5F178EE22A05938100CBBA95 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F178EE12A05938100CBBA95 /* Controller.swift */; };
 		5F178EE42A05938800CBBA95 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F178EE32A05938800CBBA95 /* Model.swift */; };
 		5F178EE62A059CC200CBBA95 /* CardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F178EE52A059CC200CBBA95 /* CardDetails.swift */; };
+		5F178EE82A06F16C00CBBA95 /* ShapesCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F178EE72A06F16C00CBBA95 /* ShapesCustom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		5F178EE12A05938100CBBA95 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		5F178EE32A05938800CBBA95 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		5F178EE52A059CC200CBBA95 /* CardDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetails.swift; sourceTree = "<group>"; };
+		5F178EE72A06F16C00CBBA95 /* ShapesCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesCustom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				5F178ED32A03069800CBBA95 /* SetGameApp.swift */,
 				5F178ED52A03069800CBBA95 /* GameView.swift */,
+				5F178EE72A06F16C00CBBA95 /* ShapesCustom.swift */,
 				5F178EE12A05938100CBBA95 /* Controller.swift */,
 				5F178EE52A059CC200CBBA95 /* CardDetails.swift */,
 				5F178EE32A05938800CBBA95 /* Model.swift */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F178EE82A06F16C00CBBA95 /* ShapesCustom.swift in Sources */,
 				5F178EE22A05938100CBBA95 /* Controller.swift in Sources */,
 				5F178ED62A03069800CBBA95 /* GameView.swift in Sources */,
 				5F178EE62A059CC200CBBA95 /* CardDetails.swift in Sources */,

@@ -21,7 +21,7 @@ struct GameView: View {
         ZStack{
             Color.offWhite
             VStack {
-                Spacer()
+                Spacer(minLength: 50)
                 HStack{
                     Text("Set Game")
                         .font(.title)
@@ -41,7 +41,7 @@ struct GameView: View {
                         }
                     }
                 }
-                Spacer()
+                Spacer(minLength: 10)
                 HStack{
                     Button(action: controller.drawCards){
                         Image(systemName: "plus")
@@ -49,7 +49,7 @@ struct GameView: View {
                     }
                     .buttonStyle(.borderedProminent)
                 }
-                Spacer()
+                Spacer(minLength: 30)
             }.padding()
         }.edgesIgnoringSafeArea(.all)
     }
@@ -65,6 +65,10 @@ struct CardView: View{
                 .fill(Color.offWhite)
                 .shadow(color: .black.opacity(0.2), radius: 10, x:10, y:10)
                 .shadow(color: .white.opacity(0.7), radius: 10, x:-5, y:-5).padding(3)
+            VStack{
+                RectangleShape()
+            }
+            
         }
     }
     
