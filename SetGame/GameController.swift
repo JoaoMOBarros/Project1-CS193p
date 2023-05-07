@@ -52,4 +52,15 @@ class GameController: ObservableObject{
     func choose(_ card: GameModel<String>.Card){
         model.choose(card: card)
     }
+    
+    func getScore() -> Int{
+        model.score
+    }
+    
+    func areThereCardsToDraw() -> Bool {
+        if(model.nextCardIndex < 81){
+            return false
+        }
+        return true
+    }
 }

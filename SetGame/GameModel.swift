@@ -11,7 +11,8 @@ struct GameModel<CardContent>{
     private(set) var cards: Array<Card>
     
     private var selectedCardsIndices: Array<Int> = []
-    private var nextCardIndex = 0
+    private(set) var nextCardIndex = 0
+    private(set) var score = 0
     
     init(arrayOfContent: Array<CardInfo>){
         cards = Array<Card>()
@@ -53,6 +54,7 @@ struct GameModel<CardContent>{
                 cards[i].isMatched.toggle()
             }
             selectedCardsIndices = []
+            score += 1
             cards[chosenIndex].isSelected.toggle()
             selectedCardsIndices.append(chosenIndex)
         }
