@@ -36,13 +36,52 @@ struct GameModel<CardContent>{
     
     
     mutating func choose (card: Card){
-//        if let chosenIndex = cards.firstIndex(where: {$0.id == card.id}),
-//           
-//        if selectedCardsIndices.count < 3 {
-//            cardsOnDisplay.first(where: )
-//            selectedCardsIndices.append(card.id)
-//
-//        }
+        
+        let chosenIndex = cards.firstIndex(where: {$0.id == card.id})!
+        // disselect card
+        if card.isSelected {
+            selectedCardsIndices.removeAll(where: {$0 == chosenIndex})
+            cards[chosenIndex].isSelected.toggle()
+        }
+        // add card to array of selected
+        else if selectedCardsIndices.count < 3 {
+            cards[chosenIndex].isSelected.toggle()
+            selectedCardsIndices.append(chosenIndex)
+        }
+        else if self.compareProps(){
+            for i in selectedCardsIndices{
+                cards[i].isMatched.toggle()
+            }
+            selectedCardsIndices = []
+            cards[chosenIndex].isSelected.toggle()
+            selectedCardsIndices.append(chosenIndex)
+        }
+        else{
+            for i in selectedCardsIndices{
+                cards[i].isSelected.toggle()
+            }
+            selectedCardsIndices = []
+            cards[chosenIndex].isSelected.toggle()
+            selectedCardsIndices.append(chosenIndex)
+        }
+    }
+    
+    func compareProps() -> Bool{
+        let colorSet = Set([cards[selectedCardsIndices[0]].content.color, cards[selectedCardsIndices[1]].content.color,cards[selectedCardsIndices[2]].content.color])
+        let shapeSet = Set([cards[selectedCardsIndices[0]].content.shape, cards[selectedCardsIndices[1]].content.shape,cards[selectedCardsIndices[2]].content.shape])
+        let shadeSet = Set([cards[selectedCardsIndices[0]].content.shade, cards[selectedCardsIndices[1]].content.shade,cards[selectedCardsIndices[2]].content.shade])
+        let numberSet = Set([cards[selectedCardsIndices[0]].content.number, cards[selectedCardsIndices[1]].content.number,cards[selectedCardsIndices[2]].content.number])
+        
+        print(colorSet)
+        print(shadeSet)
+        print(shapeSet)
+        print(numberSet)
+        
+        if (colorSet.count == 2 || shapeSet.count == 2 || shadeSet.count == 2 || numberSet.count == 2) {
+            return false
+        }
+        
+        return true
     }
     
     struct Card: Identifiable{

@@ -36,7 +36,7 @@ struct GameView: View {
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 75))]){
                         ForEach(controller.cards){ card in
                             CardView(cardInfo: card).aspectRatio(2/3,contentMode: .fit).onTapGesture {
-                                controller.selectCard()
+                                controller.choose(card)
                             }
                         }
                     }
@@ -61,33 +61,31 @@ struct CardView: View{
     var controller = CardController()
     
     var body: some View{
-        ZStack{
-            if cardInfo.isOnDisplay {
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.offWhite)
-                    .shadow(color: .black.opacity(0.2), radius: 10, x:10, y:10)
-                    .shadow(color: .white.opacity(0.7), radius: 10, x:-5, y:-5).padding(3)
-                VStack{
-                    ForEach(0..<controller.getNumber(number: cardInfo.content.number), id: \.self){_ in
-                        controller.getShape(details: cardInfo.content)
+        if !cardInfo.isMatched{
+            ZStack{
+                if cardInfo.isOnDisplay {
+                    if cardInfo.isSelected{
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.offWhite)
+                            .shadow(color: .black.opacity(0.2), radius: 10, x:10, y:10)
+                            .shadow(color: .white.opacity(0.7), radius: 10, x:-5, y:-5).padding(3)
+                    }
+                    else{
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.black)
+                            .shadow(color: .black.opacity(0.2), radius: 10, x:10, y:10)
+                            .shadow(color: .white.opacity(0.7), radius: 10, x:-5, y:-5).padding(3)
+                    }
+                    VStack{
+                        ForEach(0..<controller.getNumber(number: cardInfo.content.number), id: \.self){_ in
+                            controller.getShape(details: cardInfo.content)
+                        }
                     }
                 }
             }
         }
     }
-    
 }
-
-
-
-
-
-
-
-
-
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

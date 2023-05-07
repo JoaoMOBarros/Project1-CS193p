@@ -49,7 +49,7 @@ class GameController: ObservableObject{
         model.addCards()
     }
     
-    func selectCard(){
-        print("Card selected")
+    func choose(_ card: GameModel<String>.Card){
+        model.choose(card: card)
     }
 }

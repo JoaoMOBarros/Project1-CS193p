@@ -8,25 +8,25 @@
 import Foundation
 
 struct CardDetails{
-    enum Shape: CaseIterable{
+    enum Shape: CaseIterable, Hashable{
         case oval
         case diamond
         case rectagle
     }
 
-    enum Color: CaseIterable{
+    enum Color: CaseIterable, Hashable{
         case red
         case blue
         case green
     }
 
-    enum Number: CaseIterable{
+    enum Number: CaseIterable, Hashable{
         case one
         case two
         case three
     }
 
-    enum Shade: CaseIterable{
+    enum Shade: CaseIterable, Hashable{
         case full
         case striped
         case outlined
