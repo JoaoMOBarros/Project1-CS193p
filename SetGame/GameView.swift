@@ -10,6 +10,7 @@ import SwiftUI
 extension Color{
     static let offWhite = Color(red: 225/255, green: 225/255, blue: 235/255)
     static let offWhiteSelected = Color(red: 205/255, green: 205/255, blue: 215/255)
+    static let mainPurple = Color(red: 155/255, green: 18/255, blue: 187/255)
 }
 
 struct GameView: View {
@@ -71,7 +72,7 @@ struct GameView: View {
     
     struct DrawingConstants {
         static let cardSize: CGFloat = 60
-        static let primaryColor: Color = Color.purple
+        static let primaryColor: Color = Color.mainPurple
         static let secondaryColor: Color = Color.white
         static let tertiaryColor: Color = Color.offWhite
     }

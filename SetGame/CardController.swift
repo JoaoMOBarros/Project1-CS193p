@@ -12,11 +12,11 @@ class CardController{
     func getColor(color: CardDetails.Color) -> Color{
         switch color {
             case .blue:
-                return Color.blue
+                return Color(red: 4/255, green: 118/255, blue: 217/255)
             case .green:
-                return Color.green
+                return Color(red: 115/255, green: 166/255, blue: 65/255)
             case .red:
-                return Color.red
+                return Color(red: 229/255, green: 0/255, blue: 0/255)
         }
     }
     
