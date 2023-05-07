@@ -38,15 +38,15 @@ class GameController: ObservableObject{
     @Published private var model: GameModel<String> = createSetGame()
     
     var cards: Array<GameModel<String>.Card>{
-        return model.cards
+        return model.cardsOnDisplay
     }
     
     func startNewGame(){
-        print("New Game")
+        model = GameController.createSetGame()
     }
     
     func drawCards(){
-        print("New Cards")
+        model.addCards()
     }
     
     func selectCard(){
