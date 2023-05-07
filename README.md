@@ -3,7 +3,7 @@
 ## App Description
 Set Card Game is a digital version of the popular card game Set. The goal of the game is to identify sets of three cards from a larger set of cards. Each card has four features: shape (oval, squiggle, or diamond), color (red, green, or purple), shading (solid, striped, or open), and number (one, two, or three). A set consists of three cards that are either all the same or all different in each feature.
 
-<img src="https://raw.githubusercontent.com/JoaoMOBarros/Project1-CS193p/main/SetGame/Assets.xcassets/preview.imageset/preview.png" width="150" height="280">
+<img src="https://raw.githubusercontent.com/JoaoMOBarros/Project1-CS193p/main/SetGame/Assets.xcassets/preview.imageset/preview.png" width="200" height="373">
 
 ## Installation
 To install the app, follow these steps:
