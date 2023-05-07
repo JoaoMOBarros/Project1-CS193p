@@ -62,16 +62,17 @@ struct CardView: View{
     
     var body: some View{
         ZStack{
-            RoundedRectangle(cornerRadius: 10)
-                .fill(Color.offWhite)
-                .shadow(color: .black.opacity(0.2), radius: 10, x:10, y:10)
-                .shadow(color: .white.opacity(0.7), radius: 10, x:-5, y:-5).padding(3)
-            VStack{
-                ForEach(0..<controller.getNumber(number: cardInfo.content.number), id: \.self){_ in
-                    controller.getShape(details: cardInfo.content)
+            if cardInfo.isOnDisplay {
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.offWhite)
+                    .shadow(color: .black.opacity(0.2), radius: 10, x:10, y:10)
+                    .shadow(color: .white.opacity(0.7), radius: 10, x:-5, y:-5).padding(3)
+                VStack{
+                    ForEach(0..<controller.getNumber(number: cardInfo.content.number), id: \.self){_ in
+                        controller.getShape(details: cardInfo.content)
+                    }
                 }
             }
-            
         }
     }
     
