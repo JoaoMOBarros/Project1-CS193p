@@ -10,19 +10,20 @@ import SwiftUI
 struct DiamondShape: View{
 
     let details: GameModel<String>.CardInfo
+    let size: CGFloat
     let controller = CardController()
     
     var body: some View{
         if details.shade == CardDetails.Shade.outlined {
             DiamondTrace()
             .stroke(controller.getColor(color: details.color), lineWidth: 2)
-            .frame(width: 50, height: 25)
+            .frame(width: size*0.66, height:  size*0.33)
         }
         else{
             DiamondTrace()
             .foregroundColor(controller.getColor(color: details.color))
             .opacity(controller.getShade(shade: details.shade))
-            .frame(width: 50, height: 25)
+            .frame(width: size*0.66, height: size*0.33)
         }
     }
 }
@@ -30,19 +31,20 @@ struct DiamondShape: View{
 struct OvalShape: View{
 
     let details: GameModel<String>.CardInfo
+    let size: CGFloat
     let controller = CardController()
     
     var body: some View{
         if details.shade == CardDetails.Shade.outlined {
             Ellipse()
             .stroke(controller.getColor(color: details.color), lineWidth: 2)
-            .frame(width: 50, height: 25)
+            .frame(width: size*0.66, height:  size*0.33)
         }
         else{
             Ellipse()
             .foregroundColor(controller.getColor(color: details.color))
             .opacity(controller.getShade(shade: details.shade))
-            .frame(width: 50, height: 25)
+            .frame(width: size*0.66, height:  size*0.33)
         }
     }
 }
@@ -50,19 +52,20 @@ struct OvalShape: View{
 struct RectangleShape: View{
 
     let details: GameModel<String>.CardInfo
+    let size: CGFloat
     let controller = CardController()
     
     var body: some View{
         if details.shade == CardDetails.Shade.outlined {
             Rectangle()
             .stroke(controller.getColor(color: details.color), lineWidth: 2)
-            .frame(width: 50, height: 25)
+            .frame(width: size*0.66, height:  size*0.33)
         }
         else{
             Rectangle()
             .foregroundColor(controller.getColor(color: details.color))
             .opacity(controller.getShade(shade: details.shade))
-            .frame(width: 50, height: 25)
+            .frame(width: size*0.66, height:  size*0.33)
         }
     }
 }

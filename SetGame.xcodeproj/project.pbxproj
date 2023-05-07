@@ -16,6 +16,7 @@
 		5F178EE62A059CC200CBBA95 /* CardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F178EE52A059CC200CBBA95 /* CardDetails.swift */; };
 		5F178EE82A06F16C00CBBA95 /* CustomShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F178EE72A06F16C00CBBA95 /* CustomShapes.swift */; };
 		5F178EEA2A06FD2600CBBA95 /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F178EE92A06FD2600CBBA95 /* CardController.swift */; };
+		5FD147462A08061B000FF01B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD147452A08061B000FF01B /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		5F178EE52A059CC200CBBA95 /* CardDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetails.swift; sourceTree = "<group>"; };
 		5F178EE72A06F16C00CBBA95 /* CustomShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapes.swift; sourceTree = "<group>"; };
 		5F178EE92A06FD2600CBBA95 /* CardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardController.swift; sourceTree = "<group>"; };
+		5FD147452A08061B000FF01B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				5F178ED32A03069800CBBA95 /* SetGameApp.swift */,
 				5F178ED52A03069800CBBA95 /* GameView.swift */,
 				5F178EE72A06F16C00CBBA95 /* CustomShapes.swift */,
+				5FD147452A08061B000FF01B /* CardView.swift */,
 				5F178EE92A06FD2600CBBA95 /* CardController.swift */,
 				5F178EE12A05938100CBBA95 /* GameController.swift */,
 				5F178EE52A059CC200CBBA95 /* CardDetails.swift */,
@@ -158,6 +161,7 @@
 				5F178EE62A059CC200CBBA95 /* CardDetails.swift in Sources */,
 				5F178EEA2A06FD2600CBBA95 /* CardController.swift in Sources */,
 				5F178ED42A03069800CBBA95 /* SetGameApp.swift in Sources */,
+				5FD147462A08061B000FF01B /* CardView.swift in Sources */,
 				5F178EE42A05938800CBBA95 /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

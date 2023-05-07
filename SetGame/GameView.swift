@@ -9,6 +9,7 @@ import SwiftUI
 
 extension Color{
     static let offWhite = Color(red: 225/255, green: 225/255, blue: 235/255)
+    static let offWhiteSelected = Color(red: 205/255, green: 205/255, blue: 215/255)
 }
 
 struct GameView: View {
@@ -33,7 +34,7 @@ struct GameView: View {
                 }
                 Spacer()
                 ScrollView{
-                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 75))]){
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: DrawingConstants.cardSize))]){
                         ForEach(controller.cards){ card in
                             CardView(cardInfo: card).aspectRatio(2/3,contentMode: .fit).onTapGesture {
                                 controller.choose(card)
@@ -53,37 +54,9 @@ struct GameView: View {
             }.padding()
         }.edgesIgnoringSafeArea(.all)
     }
-}
-
-struct CardView: View{
     
-    let cardInfo: GameModel<String>.Card
-    var controller = CardController()
-    
-    var body: some View{
-        if !cardInfo.isMatched{
-            ZStack{
-                if cardInfo.isOnDisplay {
-                    if cardInfo.isSelected{
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(Color.offWhite)
-                            .shadow(color: .black.opacity(0.2), radius: 10, x:10, y:10)
-                            .shadow(color: .white.opacity(0.7), radius: 10, x:-5, y:-5).padding(3)
-                    }
-                    else{
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(Color.black)
-                            .shadow(color: .black.opacity(0.2), radius: 10, x:10, y:10)
-                            .shadow(color: .white.opacity(0.7), radius: 10, x:-5, y:-5).padding(3)
-                    }
-                    VStack{
-                        ForEach(0..<controller.getNumber(number: cardInfo.content.number), id: \.self){_ in
-                            controller.getShape(details: cardInfo.content)
-                        }
-                    }
-                }
-            }
-        }
+    struct DrawingConstants {
+        static let cardSize: CGFloat = 60
     }
 }
 

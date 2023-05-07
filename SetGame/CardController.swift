@@ -21,14 +21,14 @@ class CardController{
     }
     
     @ViewBuilder
-    func getShape(details: GameModel<String>.CardInfo) -> some View{
+    func getShape(details: GameModel<String>.CardInfo, size: CGFloat) -> some View{
         switch details.shape{
             case .diamond:
-                DiamondShape(details: details)
+                DiamondShape(details: details, size: size)
             case .oval:
-                OvalShape(details: details)
+                OvalShape(details: details, size: size)
             case .rectagle:
-                RectangleShape(details: details)
+                RectangleShape(details: details, size: size)
         }
     }
     
