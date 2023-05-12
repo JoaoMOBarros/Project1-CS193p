@@ -1,5 +1,3 @@
-*This is an iOS app created as a project for the Stanford class CS193P - Developing for iOS. The app is called Set Card Game*
-
 ## App Description
 Set Card Game is a digital version of the popular card game Set. The goal of the game is to identify sets of three cards from a larger set of cards. Each card has four features: shape (oval, rectangle, or diamond), color (red, green, or blue), shading (solid, faded, or open), and number (one, two, or three). A set consists of three cards that are either all the same or all different in each feature.
 
